@@ -4358,6 +4358,7 @@ footer {
     background-image: url(images/login-register/main-bg.jpg) !important;
     background-attachment: fixed !important;
     background-position: center !important;
+
 }
 
 .login-register-bg {
@@ -4366,8 +4367,9 @@ footer {
 }
 
 .lg-left {
-    background-image: url(images/login-register/bg.jpg);
-    height: 646px;
+    background-image: url(images/login-register/souretlogo.jpeg);
+    background-repeat:no-repeat;
+    height: 446px;
     width: 100%;
     padding: 30px;
 }

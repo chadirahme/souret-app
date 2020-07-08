@@ -1,6 +1,6 @@
-import { Home,NotFound,UserProfile } from 'containers';
+import { Home,NotFound,UserProfile,MyDashboardActivity } from 'containers';
 import { AUTH_ONLY } from 'router/types';
-import Login from '../login/Login'
+import {Login,Register} from 'login'
 
 export default () => [
     {
@@ -31,6 +31,14 @@ export default () => [
         exact: true,
         component: Login,
     },
+
+    {
+        path: '/register',
+        exact: true,
+        component: Register,
+    },
+
+
     {
         path: '/userProfile',
         exact: true,
@@ -39,6 +47,16 @@ export default () => [
             [AUTH_ONLY]: true,
         },
     },
+
+    {
+        path: '/myDashboardActivity',
+        exact: true,
+        component: MyDashboardActivity,
+        meta: {
+            [AUTH_ONLY]: true,
+        },
+    },
+
     {
         path: '*',
         component: NotFound,

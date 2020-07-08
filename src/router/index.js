@@ -6,7 +6,8 @@ import { NotFound } from 'containers';
 import { requireLogin, waitOneSecond } from './guards';
 import getRoutes from './routes';
 
-const GLOBAL_GUARDS = [requireLogin, waitOneSecond];
+//const GLOBAL_GUARDS = [requireLogin, waitOneSecond];
+const GLOBAL_GUARDS = [requireLogin];
 
 const Router = ({ children }) => {
     const routes = useMemo(() => getRoutes(), []);

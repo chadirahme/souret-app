@@ -58,14 +58,14 @@ import './vendor/OwlCarousel/assets/owl.theme.default.min.css';
                                     <li className="nav-item active">
                                         <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
                                     </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="discussions.html">Discussion</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="weather.html">Weather</a>
-                                    </li>
+                                    {/*<li className="nav-item">*/}
+                                        {/*<a className="nav-link" href="discussions.html">Discussion</a>*/}
+                                    {/*</li>*/}
+                                    {/*<li className="nav-item">*/}
+                                        {/*<a className="nav-link" href="weather.html">Weather</a>*/}
+                                    {/*</li>*/}
                                 </ul>
-                                <a href="add_new_event.html" className="add-event">Add New Event</a>
+                                <a href="/myDashboardActivity" className="add-event">Add New Event</a>
                             </div>
 
                             <ul className="group-icons">

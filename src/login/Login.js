@@ -11,8 +11,8 @@ const COURSE_API_URL = STORAGE_KEYS.COURSE_API_URL;
     constructor(props) {
         super(props);
         this.state = {
-            'email': 'eng.chadi@gmail.com',
-            'password': '123456',
+            'email': '',
+            'password': '',
             loginmessage:'',
             validate: {
                 emailState: '',
@@ -191,62 +191,75 @@ const COURSE_API_URL = STORAGE_KEYS.COURSE_API_URL;
         const { errors, formSubmitted } = this.state;
 
         return (
-            <Container className="Login">
-                <h2>Sign In</h2>
+            <main className="register-mp">
                 <Form className="form"  onSubmit={this.submitForm} >
-                    {/*onSubmit={ (e) => this.submitForm(e) }>*/}
-                    <Col>
-                        <FormGroup>
-                            <Label>User Email</Label>
-                            <Input
-                                type="email"
-                                name="email"
-                                id="exampleEmail"
-                                placeholder="myemail@email.com"
-                                required
-                                value={ email }
-                                valid={ this.state.validate.emailState === 'has-success' }
-                                invalid={ this.state.validate.emailState === 'has-danger' }
-                                onChange={ (e) => {
-                                    this.validateEmail(e)
-                                    this.handleChange(e)
-                                } }
-                            />
-                            <FormFeedback valid>
-                                That's a tasty looking email you've got there.
-                            </FormFeedback>
-                            <FormFeedback>
-                                Uh oh! Looks like there is an issue with your email. Please input a correct email.
-                            </FormFeedback>
-                            <FormText>Your username is most likely your email.</FormText>
-                        </FormGroup>
-                    </Col>
-                    <Col>
-                        <FormGroup>
-                            <Label for="examplePassword">Password</Label>
-                            <Input
-                                type="password"
-                                name="password"
-                                required
-                                id="examplePassword"
-                                placeholder="********"
-                                value={ password }
-                                valid={ this.state.validate.passwordState === 'has-success' }
-                                invalid={ this.state.validate.passwordState === 'has-danger' }
-                                onChange={ (e) =>{
-                                    this.validatePassword(e)
-                                this.handleChange(e)
-                                }}
-                            />
-                            <FormText>{errors.password}</FormText>
-                        </FormGroup>
-                    </Col>
-                    <Button type="submit">Submit</Button>
-                    <div className='error'>
-                    {this.state.loginmessage}
+                <div className="main-section">
+                    <div className="container">
+                        <div className="row justify-content-md-center">
+                            <div className="col-md-10">
+                                <div className="login-register-bg">
+                                    <div className="row no-gutters">
+                                        <div className="col-lg-6">
+                                            <div className="lg-left">
+
+                                                <div className="lr-text">
+                                                    <h2>Login Now</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6">
+                                            <div className="lr-right">
+
+                                                <div className="login-register-form">
+                                                    <form>
+                                                        <div className="form-group">
+                                                            <input className="title-discussion-input" placeholder="Type Email Address" id="email"
+                                                                   type="email"
+                                                                   name="email"
+                                                                   required
+                                                                   value={ email }
+                                                                   valid={ this.state.validate.emailState === 'has-success' }
+                                                                   invalid={ this.state.validate.emailState === 'has-danger' }
+                                                                   onChange={ (e) => {
+                                                                       this.validateEmail(e)
+                                                                       this.handleChange(e)
+                                                                   } }
+                                                            />
+                                                        </div>
+                                                        <div className="form-group">
+                                                            <input className="title-discussion-input"  placeholder="Password" id="password"
+                                                                   type="password"
+                                                                   name="password"
+                                                                   required
+                                                                   value={ password }
+                                                                   valid={ this.state.validate.passwordState === 'has-success' }
+                                                                   invalid={ this.state.validate.passwordState === 'has-danger' }
+                                                                   onChange={ (e) =>{
+                                                                       this.validatePassword(e)
+                                                                       this.handleChange(e)
+                                                                   }}
+                                                            />
+                                                            <FormText>{errors.password}</FormText>
+                                                        </div>
+                                                        <button className="login-btn" type="submit" id="btnLogin">Login Now</button>
+                                                        <div className='error'>
+                                                            {this.state.loginmessage}
+                                                        </div>
+                                                    </form>
+                                                    {/*<a href="#" className="forgot-link">Forgot Password?</a>*/}
+                                                    <div className="regstr-link">Don’t have an account? <a href="/register">Register Now</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+                </div>
                 </Form>
-            </Container>
+            </main>
         );
         // return (
         //     <div className="Login">
